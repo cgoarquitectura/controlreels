@@ -39,6 +39,14 @@ h1 {
     margin-bottom: 5px;
     color: #fff;
 }
+h2 {
+    font-family: inherit; /* Hereda de h1 */
+    color: #fff;
+    font-size: 1.1em; /* Relativo al tamaño base */
+    font-weight: 600; /* Semi-negrita */
+    margin: 0 0 15px 0;
+    text-align: center;
+}
 
 header p {
     color: #fbfbfb;
