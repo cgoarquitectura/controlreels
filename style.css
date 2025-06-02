@@ -78,6 +78,13 @@ header p {
 .link-button i {
     font-size: 20px;
 }
+.enlace-texto, .enlace-texto:visited, .enlace-texto:hover, 
+.enlace-texto:active, .enlace-texto:focus {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .whatsapp {
     background-color: #25D366;
