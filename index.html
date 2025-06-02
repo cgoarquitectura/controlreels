@@ -2,60 +2,78 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#6a35ff"> <!-- Color de la barra en móviles -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
-    <title>CONTROLREELS | Clon de Linktree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a Controlreels.com | Estabilizadores | Luces RGB | Micrófonos | Trípodes y muco más</title>
+    <meta name="description" content="Compras y ventas minoristas. Equipos audiovisuales para Creadores de Contenido, Fotógrafos, Videógrafos, Podcasters y Aficionados.">
+    <meta name="keywords" content="estabilizadores, gimbals, luces rgb, iluminación led, micrófonos, micrófonos inalámbricos, trípodes, equipos audiovisuales, fotografía, videografía, podcast, creadores de contenido, accesorios cámara, soportes cámara, difusores luz, anillos luz, softboxes, flashes, grabación video, streaming, youtube, tiktok, instagram reels, equipo fotográfico, accesorios video, cámaras, lentes, filtros, sliders, drones, grabación audio, mezcladoras audio, iluminación estudio, reflectores, backdrops, green screen, teleprompter, steadycam, monopies, soportes smartphone, rigs cámara, baterías cámara, tarjetas memoria, bolsos equipo, protectores lente, kits iluminación, grabación exterior, estudio casero">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- Foto de perfil -->
-        <img src="assets/logo.webp" alt="CONTROLREELS" class="profile-pic">
+        <header>
+            <div class="profile">
+                <img src="assets/logo.webp" alt="Control Reels Logo" class="profile-img">
+                <h1>Control Reels</h1>
+                <p>🎥 Equipos audiovisuales para creadores de contenido 🎙️</p>
+            </div>
+        </header>
 
-        <!-- Nombre y biografía -->
-        <h1>CONTROLREELS</h1>
-        <p>🎬 Tienda Online de equipos audiovisuales para Creadores de Contenido y aficionados ⚡</p>
-        <p>¡Somos Tendencia!</p>
-
-        <!-- Enlaces -->
-        <div class="links">
-          
-            <a href="https://web.whatsapp.com/send/?phone=584242024331&text&type=phone_number&app_absent=0" target="_blank" class="link">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="https://www.whatsapp.com/catalog/584242024331/?app_absent=0" target="_blank" class="link">
-                <i class="fa-solid fa-bag-shopping"></i>Catálogo
+        <main>
+            <div class="links">
+                <a href="https://wa.me/584242024331" class="link-button whatsapp" target="_blank">
+                    <span>WhatsApp Chat</span>
+                    <i class="fab fa-whatsapp"></i>
                 </a>
-            <a href="https://instagram.com/controlreels" target="_blank" class="link">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="#" class="link" id="open-map">
-                <i class="fa-solid fa-location-dot"></i> Ubicación
-            </a>
-            <a href="https://tiktok.com/@controlreels" target="_blank" class="link">
-                <i class="fab fa-tiktok"></i> TikTok
-            </a>
-        
-       
-            <!-- Añade más enlaces según el original -->
-        </div>
-        
-<!-- Modal del Mapa (oculto inicialmente) -->
-<div class="modal" id="map-modal">
-    <div class="modal-content">
-        <span class="close-btn" id="close-map">&times;</span>
-        <h3>Nuestra Ubicación</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d343.4535589347825!2d-66.82773604965772!3d10.475281952047878!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59058081bb59%3A0xcb10c89c4297575a!2sControl%20Reels!5e0!3m2!1ses-419!2sus!4v1748830114288!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-       
-    </div>
-</div>
+                <a href="https://wa.me/584242024331?text=Quiero%20ver%20el%20catálogo" class="link-button catalog" target="_blank">
+                    <span>Catálogo</span>
+                    <i class="fas fa-book"></i>
+                </a>
+                <button class="link-button" id="locationBtn">
+                    <span>Ubicación</span>
+                    <i class="fas fa-map-marker-alt"></i>
+                </button>
+                <button class="link-button" id="scheduleBtn">
+                    <span>Horarios</span>
+                    <i class="far fa-clock"></i>
+                </button>
+            </div>
+        </main>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2025 CONTROLREELS</p>
+        <footer>
+            <h2>Síguenos en las redes!</h2>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© 2025 Control Reels</p>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="locationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Nuestra Ubicación</h2>
+            <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d343.4535589347825!2d-66.82773604965772!3d10.475281952047878!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59058081bb59%3A0xcb10c89c4297575a!2sControl%20Reels!5e0!3m2!1ses-419!2sus!4v1748830114288!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="scheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Horarios de Atención (Cita Previa)</h2>
+            <div class="schedule-info">
+                <p><strong>Lunes a Viernes:</strong> 10:00 AM - 5:00 PM</p>
+                <p><strong>Sábados:</strong> 10:00 AM - 5:00 PM</p>
+                <p><strong>Domingos:</strong> Solo delivery</p>
+                <p>Puedes contactarnos por WhatsApp fuera de estos horarios.</p>
+            </div>
         </div>
     </div>
 
