@@ -250,6 +250,7 @@ footer {
 
     .links {
         gap: 20px;
+        text-decoration: none;
     }
 
     .link-button {
