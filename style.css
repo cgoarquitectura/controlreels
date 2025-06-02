@@ -1,68 +1,87 @@
-/* Estilo basado en CONTROLREELS (tema oscuro) */
+/* ===== RESET MOBILE-FIRST ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: #0f0f12; /* Fondo oscuro similar */
+    font-family: 'Inter', sans-serif;
+    background: #0f0f12;
     color: white;
+    line-height: 1.5;
+    padding: 20px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 20px;
 }
 
 .container {
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Ideal para móviles */
+    padding: 15px;
 }
 
+/* ===== ELEMENTOS RESPONSIVE ===== */
 .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 100px; /* Más pequeño en móviles */
+    height: 100px;
     border-radius: 50%;
-    object-fit: cover;
-    /*border: 3px solid #6a35ff; /* Borde morado */
-    margin-bottom: 15px;
+    border: 3px solid #6a35ff;
+    margin: 0 auto 15px;
+    display: block;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #fff;
+    font-size: 1.5rem; /* Tamaño flexible */
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 p {
+    font-size: 0.9rem;
     margin-bottom: 20px;
+    text-align: center;
     opacity: 0.8;
-    color: #b3b3b3;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 25px;
+    gap: 10px;
 }
 
 .link {
     background: #1e1e24;
-    padding: 14px;
+    padding: 12px;
     border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    border: 1px solid #2d2d35;
+    font-size: 0.95rem; /* Texto más grande en móviles */
+    text-align: center;
+}
+
+/* ===== MEDIA QUERIES PARA AJUSTES ESPECÍFICOS ===== */
+@media (max-width: 480px) {
+    /* Ajustes para pantallas pequeñas (ej: Huawei Y9) */
+    .link {
+        padding: 14px; /* Botones más grandes para tacto */
+    }
+    
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Para dispositivos muy pequeños (ej: Samsung J2) */
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
 }
 
 .link:hover {
