@@ -104,6 +104,9 @@ header p {
     background-color: #4CAF50;
     color: white;
 }
+.hidden-element {
+    display: none !important;
+}
 
 /* Footer & Social Links */
 footer {
