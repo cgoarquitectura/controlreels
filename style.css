@@ -286,4 +286,7 @@ footer {
     .catalog:hover {
         transform: scale(1.01) translateY(-1px);
     }
+    h3{
+        font-size: .7em;
+    }
 }
