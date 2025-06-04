@@ -5,9 +5,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const locationBtn = document.getElementById('locationBtn');
     const scheduleBtn = document.getElementById('scheduleBtn');
     const closeButtons = document.getElementsByClassName('close');
+    const mapContainer = document.querySelector('.map-container');
 
-    // Open location modal
+    // Open location modal with lazy-loaded map
     locationBtn.onclick = function() {
+        // Cargar el mapa solo si no está ya cargado
+        if (!mapContainer.querySelector('iframe')) {
+            const loadingText = document.createElement('p');
+            loadingText.textContent = 'Cargando mapa...';
+            loadingText.style.textAlign = 'center';
+            loadingText.style.padding = '20px';
+            mapContainer.appendChild(loadingText);
+
+            const iframe = document.createElement('iframe');
+            iframe.onload = function() {
+                mapContainer.removeChild(loadingText);
+            };
+            
+            iframe.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d343.4535589347825!2d-66.82773604965772!3d10.475281952047878!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59058081bb59%3A0xcb10c89c4297575a!2sControl%20Reels!5e0!3m2!1ses-419!2sus!4v1748830114288!5m2!1ses-419!2sus');
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '450');
+            iframe.setAttribute('style', 'border:0;');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('loading', 'lazy');
+            iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+            
+            mapContainer.appendChild(iframe);
+        }
+        
         locationModal.style.display = 'block';
     }
 
