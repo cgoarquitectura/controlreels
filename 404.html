@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error 404 | Control Reels</title>
+    <meta name="description" content="Página no encontrada - Equipos audiovisuales para creadores de contenido" />
+    
+    <!-- Estilos y fuentes igual que index.html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png" />
+    
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <img
+                    src="assets/logo.webp"
+                    alt="Control Reels - Equipos audiovisuales para creadores de contenido"
+                    class="profile-img" loading="lazy"
+                />
+                <!-- Eliminamos el h1 original para priorizar el error -->
+                <p>Equipos audiovisuales para creadores de contenido</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="error-container">
+                <h1 class="error-title">ERROR 404</h1>
+                <h2 class="error-message">Lo sentimos mucho, la página qu buscas ya no existe</h2>
+                
+                <a href="https://controlreels.com" class="home-button">
+                    <i class="fas fa-arrow-left"></i> Volver al Inicio
+                </a>
+                
+                <p class="redirect-message">Redireccionando en <span id="countdown">5</span> segundos...</p>
+            </div>
+        </main>
+
+        <footer>
+            <h3>Síguenos en las redes!</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/controlreels/" target="_blank"
+                    ><i class="fab fa-instagram" rel="nofollow"></i
+                ></a>
+                <a href="https://tiktok.com/@controlreels" target="_blank"
+                    ><i class="fab fa-tiktok" rel="nofollow"></i
+                ></a>
+                <a href="https://www.facebook.com/controlreels/" target="_blank"
+                    ><i class="fab fa-facebook" rel="nofollow"></i
+                ></a>
+            </div>
+            <h4>Estabilizadores | Luces RGB | Micrófonos | Trípodes</h4>
+            <p class="copyright">© 2025 Control Reels Caracas - Venezuela</p>
+        </footer>
+    </div>
+
+    <!-- Redirección automática -->
+    <script>
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdown = setInterval(function() {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if(seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = 'https://controlreels.com';
+            }
+        }, 1000);
+        
+        // Cancelar redirección con cualquier clic
+        document.addEventListener('click', function() {
+            clearInterval(countdown);
+            document.querySelector('.redirect-message').innerHTML = 'Redirección cancelada <br><small>Haz clic en el botón para volver</small>';
+        });
+    </script>
+</body>
+</html>
