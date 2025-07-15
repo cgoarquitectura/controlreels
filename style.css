@@ -104,7 +104,10 @@ h3 {
     background-color: #25D366;
     color: white;
 }
-
+.tienda {
+    background-color: #FA6624;
+    color: white;
+}
 .catalog {
     background-color: #4CAF50;
     color: white;
@@ -335,5 +338,3 @@ footer {
         font-size: .7em;
     }
 }
-
-
